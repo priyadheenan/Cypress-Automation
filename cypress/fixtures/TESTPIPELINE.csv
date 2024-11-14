@@ -1,0 +1,239 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+policyMgmt,Chrome 126.0.0.0,,,2024-08-16 02:22:38,2024-08-16 02:30:37,7m - 59.059s,PASSED
+,,,,,,,
+Test Cases/policyManagement/Change Request/VerifyApplyChangeRequest,Chrome 126.0.0.0,,,2024-08-16 02:22:52,2024-08-16 02:25:46,2m - 54.179s,PASSED
+Start listener action : BeforeTestCase,Chrome 126.0.0.0,,,2024-08-16 02:22:52,2024-08-16 02:22:52,0.357s,PASSED
+"dataFilePath = ""Data Files/policyManagement/policyChangeRequestData""",Chrome 126.0.0.0,,,2024-08-16 02:22:54,2024-08-16 02:22:54,0.000s,PASSED
+tc = new VerifyApplyChangeRequest(dataFilePath),Chrome 126.0.0.0,,,2024-08-16 02:22:54,2024-08-16 02:22:55,0.486s,PASSED
+"policyColumnData = ""Data Files/policyManagement/policyManagementColumn""",Chrome 126.0.0.0,,,2024-08-16 02:22:55,2024-08-16 02:22:55,0.001s,PASSED
+"applicantFieldData = ""Data Files/applicants/defaultDataCreateApplicant""",Chrome 126.0.0.0,,,2024-08-16 02:22:55,2024-08-16 02:22:55,0.001s,PASSED
+tc.run(),Chrome 126.0.0.0,,,2024-08-16 02:22:55,2024-08-16 02:22:55,0.019s,PASSED
+"navBar.hoverElement(""applicantsIcon"")",Chrome 126.0.0.0,,,2024-08-16 02:22:55,2024-08-16 02:22:55,0.339s,PASSED
+"navBar.clickElement(""createApplicantLink"")",Chrome 126.0.0.0,,,2024-08-16 02:22:55,2024-08-16 02:22:55,0.291s,PASSED
+applicantFields = findTestData(applicantFieldData),Chrome 126.0.0.0,,,2024-08-16 02:22:55,2024-08-16 02:22:55,0.005s,PASSED
+"createNewApp.setApplicantFieldsWithDefaultValues(applicantFields, ""applicantFieldValue"")",Chrome 126.0.0.0,,,2024-08-16 02:22:55,2024-08-16 02:23:05,9.802s,PASSED
+"createNewApp.clickElement(""applicantSaveButton"")",Chrome 126.0.0.0,,,2024-08-16 02:23:05,2024-08-16 02:23:06,0.289s,PASSED
+applicantPolicyPage.goToAddPolicyPage(),Chrome 126.0.0.0,,,2024-08-16 02:23:06,2024-08-16 02:23:11,5.081s,PASSED
+"addPolicyPage.setPolicyFieldsWithDefaultValues(data, ""policyCreateValue"")",Chrome 126.0.0.0,,,2024-08-16 02:23:11,2024-08-16 02:23:17,6.547s,PASSED
+"addPolicyPage.clickElement(""addPolicySubmitButton"")",Chrome 126.0.0.0,,,2024-08-16 02:23:17,2024-08-16 02:23:17,0.194s,PASSED
+applicantPolicyPage.navigateToRequestChangePolicy(),Chrome 126.0.0.0,,,2024-08-16 02:23:17,2024-08-16 02:23:21,3.538s,PASSED
+"addPolicyPage.requestChangePolicy(data, ""changeRequestValue"")",Chrome 126.0.0.0,,,2024-08-16 02:23:21,2024-08-16 02:23:23,2.357s,PASSED
+"addPolicyPage.clickElement(""editChangeRequestPolicy"")",Chrome 126.0.0.0,,,2024-08-16 02:23:23,2024-08-16 02:23:23,0.177s,PASSED
+delay(medTimeOut),Chrome 126.0.0.0,,,2024-08-16 02:23:23,2024-08-16 02:23:28,5.003s,PASSED
+apeTabs = new pageClasses.common.APETabs(),Chrome 126.0.0.0,,,2024-08-16 02:23:28,2024-08-16 02:23:28,0.014s,PASSED
+apeTabs.clickSaveAndClose(),Chrome 126.0.0.0,,,2024-08-16 02:23:28,2024-08-16 02:23:30,1.400s,PASSED
+delay(smallTimeOut),Chrome 126.0.0.0,,,2024-08-16 02:23:30,2024-08-16 02:23:32,2.002s,PASSED
+switchToWindowIndex(1),Chrome 126.0.0.0,,,2024-08-16 02:23:32,2024-08-16 02:23:32,0.126s,PASSED
+switchToDefaultContent(),Chrome 126.0.0.0,,,2024-08-16 02:23:32,2024-08-16 02:23:32,0.035s,PASSED
+policyColumn = findTestData(policyColumnData),Chrome 126.0.0.0,,,2024-08-16 02:23:32,2024-08-16 02:23:32,0.004s,PASSED
+"result = verifyTextPresent(policyColumn.getValue(""changeRequestVerify"", 1), false)",Chrome 126.0.0.0,,,2024-08-16 02:23:32,2024-08-16 02:23:32,0.136s,PASSED
+finalResult.add(String.valueOf(result)),Chrome 126.0.0.0,,,2024-08-16 02:23:32,2024-08-16 02:23:32,0.001s,PASSED
+memoPage = new pageClasses.applicants.MemoPage(),Chrome 126.0.0.0,,,2024-08-16 02:23:32,2024-08-16 02:23:32,0.007s,PASSED
+memoPage.confirmChange(),Chrome 126.0.0.0,,,2024-08-16 02:23:32,2024-08-16 02:23:50,17.665s,PASSED
+"result1 = verifyTextNotPresent(policyColumn.getValue(""changeRequestVerify"", 5), false)",Chrome 126.0.0.0,,,2024-08-16 02:23:50,2024-08-16 02:23:50,0.134s,PASSED
+finalResult.add(String.valueOf(result1)),Chrome 126.0.0.0,,,2024-08-16 02:23:50,2024-08-16 02:23:50,0.000s,PASSED
+"addPolicyPage.setPolicyFieldsWithDefaultValues(data, ""changePremiumValue"")",Chrome 126.0.0.0,,,2024-08-16 02:23:50,2024-08-16 02:24:54,1m - 4.405s,PASSED
+"addPolicyPage.setTextField(""changePremium"", ""200"")",Chrome 126.0.0.0,,,2024-08-16 02:24:54,2024-08-16 02:24:55,0.358s,PASSED
+"addPolicyPage.clickElement(""changePolicyBtn"")",Chrome 126.0.0.0,,,2024-08-16 02:24:55,2024-08-16 02:24:55,0.182s,PASSED
+waitForPageLoad(longTimeOut),Chrome 126.0.0.0,,,2024-08-16 02:24:55,2024-08-16 02:24:55,0.017s,PASSED
+delay(longTimeOut),Chrome 126.0.0.0,,,2024-08-16 02:24:55,2024-08-16 02:25:05,10.003s,PASSED
+"memoPage.waitForElementToAppear(""actionsInPolicyDetails"")",Chrome 126.0.0.0,,,2024-08-16 02:25:05,2024-08-16 02:25:36,31.021s,PASSED
+delay(longTimeOut),Chrome 126.0.0.0,,,2024-08-16 02:25:36,2024-08-16 02:25:46,10.002s,PASSED
+"result2 = verifyTextPresent(policyColumn.getValue(""changeRequestVerify"", 6), false)",Chrome 126.0.0.0,,,2024-08-16 02:25:46,2024-08-16 02:25:46,0.096s,PASSED
+finalResult.add(String.valueOf(result2)),Chrome 126.0.0.0,,,2024-08-16 02:25:46,2024-08-16 02:25:46,0.000s,PASSED
+closeWindowIndex(1),Chrome 126.0.0.0,,,2024-08-16 02:25:46,2024-08-16 02:25:46,0.083s,PASSED
+"!(finalResult.contains(""false""))",Chrome 126.0.0.0,,,2024-08-16 02:25:46,2024-08-16 02:25:46,0.008s,PASSED
+Start listener action : AfterTestCase,Chrome 126.0.0.0,,,2024-08-16 02:25:46,2024-08-16 02:25:46,0.039s,PASSED
+,,,,,,,
+Test Cases/policyManagement/Change Request/VerifyCommercialPackagePolicyCR,Chrome 126.0.0.0,,,2024-08-16 02:25:46,2024-08-16 02:28:55,3m - 9.129s,PASSED
+Start listener action : BeforeTestCase,Chrome 126.0.0.0,,,2024-08-16 02:25:46,2024-08-16 02:25:46,0.091s,PASSED
+"dataFilePath = ""Data Files/policyManagement/change request/policyChangeRequestData""",Chrome 126.0.0.0,,,2024-08-16 02:25:47,2024-08-16 02:25:47,0.000s,PASSED
+tc = new VerifyCommercialPackagePolicyCR(dataFilePath),Chrome 126.0.0.0,,,2024-08-16 02:25:47,2024-08-16 02:25:47,0.014s,PASSED
+"subLineDataValue = ""Data Files/policyManagement/change request/subLobPolicyData""",Chrome 126.0.0.0,,,2024-08-16 02:25:47,2024-08-16 02:25:47,0.000s,PASSED
+"apeDataValue = ""Data Files/policyManagement/change request/apeData""",Chrome 126.0.0.0,,,2024-08-16 02:25:47,2024-08-16 02:25:47,0.001s,PASSED
+tc.run(),Chrome 126.0.0.0,,,2024-08-16 02:25:47,2024-08-16 02:25:47,0.002s,PASSED
+navBar = new pageClasses.common.NavBar(),Chrome 126.0.0.0,,,2024-08-16 02:25:47,2024-08-16 02:25:47,0.005s,PASSED
+navBar.goToCreateNewCommercialApplicantPage(),Chrome 126.0.0.0,,,2024-08-16 02:25:47,2024-08-16 02:25:53,6.121s,PASSED
+subLine = findTestData(subLineDataValue),Chrome 126.0.0.0,,,2024-08-16 02:25:53,2024-08-16 02:25:53,0.004s,PASSED
+apeData = findTestData(apeDataValue),Chrome 126.0.0.0,,,2024-08-16 02:25:53,2024-08-16 02:25:53,0.003s,PASSED
+createNewCommercialApplicantPage = new pageClasses.applicants.CreateNewCommercialApplicantPage(),Chrome 126.0.0.0,,,2024-08-16 02:25:53,2024-08-16 02:25:53,0.020s,PASSED
+addPolicyPage = new pageClasses.common.AddPolicyPage(),Chrome 126.0.0.0,,,2024-08-16 02:25:53,2024-08-16 02:25:53,0.009s,PASSED
+apeTabs = new pageClasses.common.APETabs(),Chrome 126.0.0.0,,,2024-08-16 02:25:53,2024-08-16 02:25:53,0.002s,PASSED
+vehiclesTab = new pageClasses.common.VehiclesTab(),Chrome 126.0.0.0,,,2024-08-16 02:25:53,2024-08-16 02:25:53,0.024s,PASSED
+policySummaryPage = new pageClasses.policyManagement.PolicySummaryPage(),Chrome 126.0.0.0,,,2024-08-16 02:25:53,2024-08-16 02:25:53,0.008s,PASSED
+policyHistoryPage = new pageClasses.policyManagement.PolicyHistoryPage(),Chrome 126.0.0.0,,,2024-08-16 02:25:53,2024-08-16 02:25:53,0.006s,PASSED
+ut = new pageClasses.general.Utility(),Chrome 126.0.0.0,,,2024-08-16 02:25:53,2024-08-16 02:25:53,0.000s,PASSED
+"commercialFieldValue = createNewCommercialApplicantPage.createCommercialApplicantWithRandomValues(data, ""commercialValue"")",Chrome 126.0.0.0,,,2024-08-16 02:25:53,2024-08-16 02:26:23,29.896s,PASSED
+applicantPolicyPage = new pageClasses.applicants.ApplicantPolicyPage(),Chrome 126.0.0.0,,,2024-08-16 02:26:23,2024-08-16 02:26:23,0.002s,PASSED
+applicantPolicyPage.goToAddPolicyPage(),Chrome 126.0.0.0,,,2024-08-16 02:26:23,2024-08-16 02:26:25,2.043s,PASSED
+"policyMapValue = addPolicyPage.setPolicyFieldsWithDefaultValues(data, ""commPkgPolicy"")",Chrome 126.0.0.0,,,2024-08-16 02:26:25,2024-08-16 02:26:28,2.955s,PASSED
+"deptIndex = addPolicyPage.getRowIndexOfScenarioName(data, ""departmentValue"")",Chrome 126.0.0.0,,,2024-08-16 02:26:28,2024-08-16 02:26:28,0.001s,PASSED
+"department = data.getValue(""department"", deptIndex)",Chrome 126.0.0.0,,,2024-08-16 02:26:28,2024-08-16 02:26:28,0.000s,PASSED
+addPolicyPage.selectDepartment(department),Chrome 126.0.0.0,,,2024-08-16 02:26:28,2024-08-16 02:26:40,12.754s,PASSED
+addPolicyPage.removeSubLineOfLob(),Chrome 126.0.0.0,,,2024-08-16 02:26:40,2024-08-16 02:26:42,1.116s,PASSED
+addPolicyPage.removeSubLineOfLob(),Chrome 126.0.0.0,,,2024-08-16 02:26:42,2024-08-16 02:26:43,1.100s,PASSED
+"addPolicyPage.addPkgLob(5, subLine, ""fieldValue"")",Chrome 126.0.0.0,,,2024-08-16 02:26:43,2024-08-16 02:27:10,27.703s,PASSED
+addPolicyPage.clickPolicyEditSubmit(),Chrome 126.0.0.0,,,2024-08-16 02:27:10,2024-08-16 02:27:13,2.299s,PASSED
+apeTabs.goToAutoCommercialPage(),Chrome 126.0.0.0,,,2024-08-16 02:27:13,2024-08-16 02:27:16,3.238s,PASSED
+apeTabs.goToVehiclesPage(),Chrome 126.0.0.0,,,2024-08-16 02:27:16,2024-08-16 02:27:19,3.302s,PASSED
+vehiclesTab.clicAddVehicle(),Chrome 126.0.0.0,,,2024-08-16 02:27:19,2024-08-16 02:27:22,2.455s,PASSED
+"vehiclesTab.selectOption(""commercialVehicleType"", ""Private Passenger"")",Chrome 126.0.0.0,,,2024-08-16 02:27:22,2024-08-16 02:27:22,0.186s,PASSED
+"vehicleFieldValue = vehiclesTab.addVehicleValue(apeData, ""vehicleValue1"")",Chrome 126.0.0.0,,,2024-08-16 02:27:22,2024-08-16 02:27:23,1.203s,PASSED
+"id = vehicleFieldValue.get(""vehicleId"")",Chrome 126.0.0.0,,,2024-08-16 02:27:23,2024-08-16 02:27:23,0.001s,PASSED
+vehicleValue.add(id),Chrome 126.0.0.0,,,2024-08-16 02:27:23,2024-08-16 02:27:23,0.000s,PASSED
+"year = vehicleFieldValue.get(""vehicleYear"")",Chrome 126.0.0.0,,,2024-08-16 02:27:23,2024-08-16 02:27:23,0.000s,PASSED
+vehicleValue.add(year),Chrome 126.0.0.0,,,2024-08-16 02:27:23,2024-08-16 02:27:23,0.000s,PASSED
+"make = vehicleFieldValue.get(""vehicleMake"")",Chrome 126.0.0.0,,,2024-08-16 02:27:23,2024-08-16 02:27:23,0.000s,PASSED
+vehicleValue.add(make),Chrome 126.0.0.0,,,2024-08-16 02:27:23,2024-08-16 02:27:23,0.001s,PASSED
+"model = vehicleFieldValue.get(""vehicleModel"")",Chrome 126.0.0.0,,,2024-08-16 02:27:23,2024-08-16 02:27:23,0.000s,PASSED
+vehicleValue.add(model),Chrome 126.0.0.0,,,2024-08-16 02:27:23,2024-08-16 02:27:23,0.000s,PASSED
+"vehiclesTab.clickElement(""save"")",Chrome 126.0.0.0,,,2024-08-16 02:27:23,2024-08-16 02:27:23,0.164s,PASSED
+apeTabs.goToGeneralLiabilityPage(),Chrome 126.0.0.0,,,2024-08-16 02:27:23,2024-08-16 02:27:25,2.200s,PASSED
+apeTabs.goToCommercialPropertyPage(),Chrome 126.0.0.0,,,2024-08-16 02:27:25,2024-08-16 02:27:28,2.538s,PASSED
+apeTabs.goTUumbrellaCommercialPage(),Chrome 126.0.0.0,,,2024-08-16 02:27:28,2024-08-16 02:27:30,2.344s,PASSED
+apeTabs.goToUnderwritingPage(),Chrome 126.0.0.0,,,2024-08-16 02:27:30,2024-08-16 02:27:33,2.221s,PASSED
+apeTabs.goToAdditionalInterestPolicyPage(),Chrome 126.0.0.0,,,2024-08-16 02:27:33,2024-08-16 02:27:33,0.186s,PASSED
+apeTabs.clickSaveAndClose(),Chrome 126.0.0.0,,,2024-08-16 02:27:33,2024-08-16 02:27:34,1.321s,PASSED
+policySummaryPage.waitForPolicyToProcessSummary(),Chrome 126.0.0.0,,,2024-08-16 02:27:34,2024-08-16 02:27:41,6.917s,PASSED
+verifyVehicleText = policySummaryPage.generateFullPolicyDocument(vehicleValue),Chrome 126.0.0.0,,,2024-08-16 02:27:41,2024-08-16 02:27:45,4.141s,PASSED
+resList.add(String.valueOf(verifyVehicleText)),Chrome 126.0.0.0,,,2024-08-16 02:27:45,2024-08-16 02:27:45,0.000s,PASSED
+policySummaryPage.changeRequest(),Chrome 126.0.0.0,,,2024-08-16 02:27:45,2024-08-16 02:27:48,2.851s,PASSED
+policySummaryPage.clickEditChangeRequest(),Chrome 126.0.0.0,,,2024-08-16 02:27:48,2024-08-16 02:27:49,1.430s,PASSED
+apeTabs.goToAutoCommercialPage(),Chrome 126.0.0.0,,,2024-08-16 02:27:49,2024-08-16 02:27:53,3.401s,PASSED
+apeTabs.goToVehiclesPage(),Chrome 126.0.0.0,,,2024-08-16 02:27:53,2024-08-16 02:27:56,3.231s,PASSED
+vehiclesTab.clicAddVehicle(),Chrome 126.0.0.0,,,2024-08-16 02:27:56,2024-08-16 02:27:58,2.395s,PASSED
+"vehiclesTab.selectOption(""commercialVehicleType"", ""Private Passenger"")",Chrome 126.0.0.0,,,2024-08-16 02:27:58,2024-08-16 02:27:59,0.192s,PASSED
+"vehicleFieldValue1 = vehiclesTab.addVehicleValue(apeData, ""vehicleValue2"")",Chrome 126.0.0.0,,,2024-08-16 02:27:59,2024-08-16 02:27:59,0.863s,PASSED
+"id1 = vehicleFieldValue1.get(""vehicleId"")",Chrome 126.0.0.0,,,2024-08-16 02:27:59,2024-08-16 02:27:59,0.000s,PASSED
+vehicleValue1.add(id1),Chrome 126.0.0.0,,,2024-08-16 02:27:59,2024-08-16 02:27:59,0.000s,PASSED
+"year1 = vehicleFieldValue1.get(""vehicleYear"")",Chrome 126.0.0.0,,,2024-08-16 02:27:59,2024-08-16 02:27:59,0.001s,PASSED
+vehicleValue1.add(year1),Chrome 126.0.0.0,,,2024-08-16 02:27:59,2024-08-16 02:27:59,0.000s,PASSED
+"make1 = vehicleFieldValue1.get(""vehicleMake"")",Chrome 126.0.0.0,,,2024-08-16 02:27:59,2024-08-16 02:27:59,0.000s,PASSED
+vehicleValue1.add(make1),Chrome 126.0.0.0,,,2024-08-16 02:27:59,2024-08-16 02:27:59,0.001s,PASSED
+"model1 = vehicleFieldValue1.get(""vehicleModel"")",Chrome 126.0.0.0,,,2024-08-16 02:27:59,2024-08-16 02:27:59,0.000s,PASSED
+vehicleValue1.add(model1),Chrome 126.0.0.0,,,2024-08-16 02:27:59,2024-08-16 02:27:59,0.000s,PASSED
+"vehiclesTab.clickElement(""save"")",Chrome 126.0.0.0,,,2024-08-16 02:27:59,2024-08-16 02:28:00,0.189s,PASSED
+apeTabs.clickSaveAndClose(),Chrome 126.0.0.0,,,2024-08-16 02:28:00,2024-08-16 02:28:01,1.352s,PASSED
+apeTabs.switchToWindowIndex(1),Chrome 126.0.0.0,,,2024-08-16 02:28:01,2024-08-16 02:28:02,0.633s,PASSED
+verifyAction = policySummaryPage.verifyChangeRequest(),Chrome 126.0.0.0,,,2024-08-16 02:28:02,2024-08-16 02:28:12,10.100s,PASSED
+resList.add(String.valueOf(verifyAction)),Chrome 126.0.0.0,,,2024-08-16 02:28:12,2024-08-16 02:28:12,0.001s,PASSED
+"policySummaryPage.clickElement(""policyHistory"")",Chrome 126.0.0.0,,,2024-08-16 02:28:12,2024-08-16 02:28:12,0.595s,PASSED
+"waitForPageLoad(longTimeOut, OPTIONAL)",Chrome 126.0.0.0,,,2024-08-16 02:28:12,2024-08-16 02:28:12,0.016s,PASSED
+policyHistoryPage.acceptChangeRequestByTransValue(transactionValue),Chrome 126.0.0.0,,,2024-08-16 02:28:12,2024-08-16 02:28:15,2.189s,PASSED
+premium = ut.getRandomNumber(3),Chrome 126.0.0.0,,,2024-08-16 02:28:15,2024-08-16 02:28:15,0.001s,PASSED
+"waitForPageLoad(longTimeOut, OPTIONAL)",Chrome 126.0.0.0,,,2024-08-16 02:28:15,2024-08-16 02:28:15,0.164s,PASSED
+"addPolicyPage.setTextField(""changePremium"", premium)",Chrome 126.0.0.0,,,2024-08-16 02:28:15,2024-08-16 02:28:15,0.335s,PASSED
+assignee = addPolicyPage.getPolicyAssigneValue(),Chrome 126.0.0.0,,,2024-08-16 02:28:15,2024-08-16 02:28:16,1.127s,PASSED
+"if (assignee.contains(""Select"") == true || assignee.contains(""Deleted"") == true)",Chrome 126.0.0.0,,,2024-08-16 02:28:16,2024-08-16 02:28:16,0.001s,PASSED
+"addPolicyPage.waitForElementToAppear(""changePolicyBtn"")",Chrome 126.0.0.0,,,2024-08-16 02:28:16,2024-08-16 02:28:16,0.033s,PASSED
+"addPolicyPage.clickElement(""changePolicyBtn"")",Chrome 126.0.0.0,,,2024-08-16 02:28:16,2024-08-16 02:28:16,0.184s,PASSED
+policySummaryPage.waitForPolicyToProcessHistory(),Chrome 126.0.0.0,,,2024-08-16 02:28:16,2024-08-16 02:28:51,34.454s,PASSED
+"applicantPolicyPage.clickElement(""policyTab"")",Chrome 126.0.0.0,,,2024-08-16 02:28:51,2024-08-16 02:28:51,0.627s,PASSED
+"policyNum = policyMapValue.get(""policyNumber"")",Chrome 126.0.0.0,,,2024-08-16 02:28:51,2024-08-16 02:28:51,0.000s,PASSED
+"applicantPolicyPage.comparePolicy(2, policyNum)",Chrome 126.0.0.0,,,2024-08-16 02:28:51,2024-08-16 02:28:55,3.388s,PASSED
+"applicantPolicyPage.selectOptionByIndex(""version2PolicySelect"", 2)",Chrome 126.0.0.0,,,2024-08-16 02:28:55,2024-08-16 02:28:55,0.251s,PASSED
+addPolicyPage.closeWindowIndex(2),Chrome 126.0.0.0,,,2024-08-16 02:28:55,2024-08-16 02:28:55,0.070s,PASSED
+addPolicyPage.closeWindowIndex(1),Chrome 126.0.0.0,,,2024-08-16 02:28:55,2024-08-16 02:28:55,0.072s,PASSED
+addPolicyPage.switchToDefaultContent(),Chrome 126.0.0.0,,,2024-08-16 02:28:55,2024-08-16 02:28:55,0.034s,PASSED
+"!(resList.contains(""false""))",Chrome 126.0.0.0,,,2024-08-16 02:28:55,2024-08-16 02:28:55,0.001s,PASSED
+Start listener action : AfterTestCase,Chrome 126.0.0.0,,,2024-08-16 02:28:55,2024-08-16 02:28:55,0.021s,PASSED
+,,,,,,,
+Test Cases/policyManagement/Change Request/VerifyPreviewScreenMonolinePolicy,Chrome 126.0.0.0,,,2024-08-16 02:28:55,2024-08-16 02:29:34,38.936s,PASSED
+Start listener action : BeforeTestCase,Chrome 126.0.0.0,,,2024-08-16 02:28:55,2024-08-16 02:28:55,0.105s,PASSED
+"dataFilePath = ""Data Files/policyManagement/monolinepolicyCRData""",Chrome 126.0.0.0,,,2024-08-16 02:28:56,2024-08-16 02:28:56,0.000s,PASSED
+tc = new VerifyPreviewScreenMonolinePolicy(dataFilePath),Chrome 126.0.0.0,,,2024-08-16 02:28:56,2024-08-16 02:28:56,0.030s,PASSED
+"policyColumnData = ""Data Files/policyManagement/policyManagementColumn""",Chrome 126.0.0.0,,,2024-08-16 02:28:56,2024-08-16 02:28:56,0.000s,PASSED
+"applicantFieldData = ""Data Files/applicants/defaultDataCreateApplicant""",Chrome 126.0.0.0,,,2024-08-16 02:28:56,2024-08-16 02:28:56,0.001s,PASSED
+tc.run(),Chrome 126.0.0.0,,,2024-08-16 02:28:56,2024-08-16 02:28:56,0.002s,PASSED
+"navBar.hoverElement(""applicantsIcon"")",Chrome 126.0.0.0,,,2024-08-16 02:28:56,2024-08-16 02:28:56,0.206s,PASSED
+"navBar.clickElement(""createApplicantLink"")",Chrome 126.0.0.0,,,2024-08-16 02:28:56,2024-08-16 02:28:57,1.571s,PASSED
+applicantFields = findTestData(applicantFieldData),Chrome 126.0.0.0,,,2024-08-16 02:28:57,2024-08-16 02:28:57,0.004s,PASSED
+"createNewApp.setApplicantFieldsWithDefaultValues(applicantFields, ""applicantFieldValue"")",Chrome 126.0.0.0,,,2024-08-16 02:28:57,2024-08-16 02:29:05,7.134s,PASSED
+"createNewApp.clickElement(""applicantSaveButton"")",Chrome 126.0.0.0,,,2024-08-16 02:29:05,2024-08-16 02:29:05,0.241s,PASSED
+applicantPolicyPage.goToAddPolicyPage(),Chrome 126.0.0.0,,,2024-08-16 02:29:05,2024-08-16 02:29:10,5.229s,PASSED
+"addPolicyPage.setPolicyFieldsWithDefaultValues(data, ""policyCreateValue"")",Chrome 126.0.0.0,,,2024-08-16 02:29:10,2024-08-16 02:29:14,3.947s,PASSED
+"addPolicyPage.clickElement(""addAndEditPolicySubmitButton"")",Chrome 126.0.0.0,,,2024-08-16 02:29:14,2024-08-16 02:29:14,0.160s,PASSED
+apeTabs.goToVehiclesPage(),Chrome 126.0.0.0,,,2024-08-16 02:29:14,2024-08-16 02:29:18,3.649s,PASSED
+"addEditVehicle.addVehicleNew(data, ""vinFieldValue"")",Chrome 126.0.0.0,,,2024-08-16 02:29:18,2024-08-16 02:29:19,1.121s,PASSED
+"apeTabs.clickElement(""saveAndCloseBtn"")",Chrome 126.0.0.0,,,2024-08-16 02:29:19,2024-08-16 02:29:19,0.160s,PASSED
+delay(smallTimeOut),Chrome 126.0.0.0,,,2024-08-16 02:29:19,2024-08-16 02:29:21,2.003s,PASSED
+"applicantPolicyPage.clickElement(""policyTab"")",Chrome 126.0.0.0,,,2024-08-16 02:29:21,2024-08-16 02:29:22,0.446s,PASSED
+applicantPolicyPage.navigateToRequestChangePolicy(),Chrome 126.0.0.0,,,2024-08-16 02:29:22,2024-08-16 02:29:23,1.708s,PASSED
+"addPolicyPage.requestChangePolicy(data, ""changeRequestValue"")",Chrome 126.0.0.0,,,2024-08-16 02:29:23,2024-08-16 02:29:26,2.315s,PASSED
+"addPolicyPage.clickElement(""editChangeRequestPolicy"")",Chrome 126.0.0.0,,,2024-08-16 02:29:26,2024-08-16 02:29:26,0.152s,PASSED
+delay(medTimeOut),Chrome 126.0.0.0,,,2024-08-16 02:29:26,2024-08-16 02:29:31,5.001s,PASSED
+apeTabs.clickSaveAndClose(),Chrome 126.0.0.0,,,2024-08-16 02:29:31,2024-08-16 02:29:32,1.355s,PASSED
+delay(smallTimeOut),Chrome 126.0.0.0,,,2024-08-16 02:29:32,2024-08-16 02:29:34,2.002s,PASSED
+switchToWindowIndex(1),Chrome 126.0.0.0,,,2024-08-16 02:29:34,2024-08-16 02:29:34,0.023s,PASSED
+switchToDefaultContent(),Chrome 126.0.0.0,,,2024-08-16 02:29:34,2024-08-16 02:29:34,0.019s,PASSED
+policyColumn = findTestData(policyColumnData),Chrome 126.0.0.0,,,2024-08-16 02:29:34,2024-08-16 02:29:34,0.005s,PASSED
+"result = verifyTextPresent(policyColumn.getValue(""changeRequestVerify"", 1), false)",Chrome 126.0.0.0,,,2024-08-16 02:29:34,2024-08-16 02:29:34,0.110s,PASSED
+finalResult.add(String.valueOf(result)),Chrome 126.0.0.0,,,2024-08-16 02:29:34,2024-08-16 02:29:34,0.000s,PASSED
+"!(finalResult.contains(""false""))",Chrome 126.0.0.0,,,2024-08-16 02:29:34,2024-08-16 02:29:34,0.001s,PASSED
+Start listener action : AfterTestCase,Chrome 126.0.0.0,,,2024-08-16 02:29:34,2024-08-16 02:29:34,0.035s,PASSED
+,,,,,,,
+Test Cases/policyManagement/VerifyPolicyDownloadMatching,Chrome 126.0.0.0,,,2024-08-16 02:29:34,2024-08-16 02:29:59,24.526s,PASSED
+Start listener action : BeforeTestCase,Chrome 126.0.0.0,,,2024-08-16 02:29:34,2024-08-16 02:29:34,0.095s,PASSED
+"dataFilePath = ""Data Files/policyManagement/policyDownloadMatching""",Chrome 126.0.0.0,,,2024-08-16 02:29:35,2024-08-16 02:29:35,0.000s,PASSED
+tc = new VerifyPolicyDownloadMatching(dataFilePath),Chrome 126.0.0.0,,,2024-08-16 02:29:35,2024-08-16 02:29:35,0.061s,PASSED
+"policyColumnData = ""Data Files/policyManagement/policyManagementColumn""",Chrome 126.0.0.0,,,2024-08-16 02:29:35,2024-08-16 02:29:35,0.001s,PASSED
+"applicantFieldData = ""Data Files/applicants/defaultDataCreateApplicant""",Chrome 126.0.0.0,,,2024-08-16 02:29:35,2024-08-16 02:29:35,0.000s,PASSED
+tc.run(),Chrome 126.0.0.0,,,2024-08-16 02:29:35,2024-08-16 02:29:35,0.002s,PASSED
+"navBar.hoverElement(""applicantsIcon"")",Chrome 126.0.0.0,,,2024-08-16 02:29:35,2024-08-16 02:29:35,0.259s,PASSED
+"navBar.clickElement(""createApplicantLink"")",Chrome 126.0.0.0,,,2024-08-16 02:29:35,2024-08-16 02:29:37,1.599s,PASSED
+applicantFields = findTestData(applicantFieldData),Chrome 126.0.0.0,,,2024-08-16 02:29:37,2024-08-16 02:29:37,0.004s,PASSED
+"lobVerifyIndex = applicantOverviewPage.getRowIndexOfScenarioName(data, ""lobVerify"")",Chrome 126.0.0.0,,,2024-08-16 02:29:37,2024-08-16 02:29:37,0.001s,PASSED
+"lob = data.getValue(""lob"", lobVerifyIndex)",Chrome 126.0.0.0,,,2024-08-16 02:29:37,2024-08-16 02:29:37,0.001s,PASSED
+"createNewApp.setApplicantFieldsWithDefaultValues(applicantFields, ""applicantFieldValue"")",Chrome 126.0.0.0,,,2024-08-16 02:29:37,2024-08-16 02:29:44,7.190s,PASSED
+"createNewApp.clickElement(""applicantSaveButton"")",Chrome 126.0.0.0,,,2024-08-16 02:29:44,2024-08-16 02:29:44,0.256s,PASSED
+applicantPolicyPage.goToAddPolicyPage(),Chrome 126.0.0.0,,,2024-08-16 02:29:44,2024-08-16 02:29:49,5.170s,PASSED
+"addPolicyPage.setPolicyFieldsWithDefaultValues(data, ""policyCreateValue"")",Chrome 126.0.0.0,,,2024-08-16 02:29:49,2024-08-16 02:29:53,3.978s,PASSED
+"policyNumber = addPolicyPage.getValue(""policyNumber"")",Chrome 126.0.0.0,,,2024-08-16 02:29:53,2024-08-16 02:29:53,0.067s,PASSED
+"addPolicyPage.clickElement(""addPolicySubmitButton"")",Chrome 126.0.0.0,,,2024-08-16 02:29:53,2024-08-16 02:29:53,0.171s,PASSED
+"applicantOverviewPage.clickElement(""policyApplicationSettingsBtn"")",Chrome 126.0.0.0,,,2024-08-16 02:29:53,2024-08-16 02:29:55,1.961s,PASSED
+applicantOverviewPage.modifyShownPolicy(),Chrome 126.0.0.0,,,2024-08-16 02:29:55,2024-08-16 02:29:56,0.808s,PASSED
+"applicantOverviewPage.clickElement(""selectPolicy"")",Chrome 126.0.0.0,,,2024-08-16 02:29:56,2024-08-16 02:29:57,0.638s,PASSED
+"result = verifyTextPresent(lob, false)",Chrome 126.0.0.0,,,2024-08-16 02:29:57,2024-08-16 02:29:57,0.256s,PASSED
+resList.add(String.valueOf(result)),Chrome 126.0.0.0,,,2024-08-16 02:29:57,2024-08-16 02:29:57,0.000s,PASSED
+"navBar.clickElement(""policyManagementIcon"")",Chrome 126.0.0.0,,,2024-08-16 02:29:57,2024-08-16 02:29:57,0.163s,PASSED
+"navBar.clickElement(""policyTransactionsLink"")",Chrome 126.0.0.0,,,2024-08-16 02:29:57,2024-08-16 02:29:58,0.937s,PASSED
+"policyTxns.setTextField(""searchPolicyOrApplicant"", policyNumber)",Chrome 126.0.0.0,,,2024-08-16 02:29:58,2024-08-16 02:29:59,0.390s,PASSED
+"sublobpresentmatchedpage = verifyTextPresent(""SubLOB"", true)",Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.230s,PASSED
+resList.add(String.valueOf(sublobpresentmatchedpage)),Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.000s,PASSED
+"!(resList.contains(""false""))",Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.001s,PASSED
+Start listener action : AfterTestCase,Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.039s,PASSED
+,,,,,,,
+Test Cases/policyManagement/VerifyDeletedTransactions,Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:30:37,38.046s,PASSED
+Start listener action : BeforeTestCase,Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.125s,PASSED
+"dataFilePath = ""Data Files/policyManagement/policyDownloadMatching""",Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.001s,PASSED
+tc = new VerifyDeletedTransactions(dataFilePath),Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.022s,PASSED
+"policyColumnData = ""Data Files/policyManagement/policyManagementColumn""",Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.000s,PASSED
+"applicantFieldData = ""Data Files/applicants/defaultDataCreateApplicant""",Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.001s,PASSED
+tc.run(),Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.001s,PASSED
+"navBar.hoverElement(""applicantsIcon"")",Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:29:59,0.206s,PASSED
+"navBar.clickElement(""createApplicantLink"")",Chrome 126.0.0.0,,,2024-08-16 02:29:59,2024-08-16 02:30:01,1.682s,PASSED
+applicantFields = findTestData(applicantFieldData),Chrome 126.0.0.0,,,2024-08-16 02:30:01,2024-08-16 02:30:01,0.004s,PASSED
+"lobVerifyIndex = applicantOverviewPage.getRowIndexOfScenarioName(data, ""lobVerify"")",Chrome 126.0.0.0,,,2024-08-16 02:30:01,2024-08-16 02:30:01,0.001s,PASSED
+"lob = data.getValue(""lob"", lobVerifyIndex)",Chrome 126.0.0.0,,,2024-08-16 02:30:01,2024-08-16 02:30:01,0.000s,PASSED
+"createNewApp.setApplicantFieldsWithDefaultValues(applicantFields, ""applicantFieldValue"")",Chrome 126.0.0.0,,,2024-08-16 02:30:01,2024-08-16 02:30:08,6.918s,PASSED
+"createNewApp.clickElement(""applicantSaveButton"")",Chrome 126.0.0.0,,,2024-08-16 02:30:08,2024-08-16 02:30:08,0.242s,PASSED
+applicantPolicyPage = new pageClasses.applicants.ApplicantPolicyPage(),Chrome 126.0.0.0,,,2024-08-16 02:30:08,2024-08-16 02:30:08,0.001s,PASSED
+applicantPolicyPage.goToAddPolicyPage(),Chrome 126.0.0.0,,,2024-08-16 02:30:08,2024-08-16 02:30:13,5.073s,PASSED
+"addPolicyPage.setPolicyFieldsWithDefaultValues(data, ""policyCreateValue"")",Chrome 126.0.0.0,,,2024-08-16 02:30:13,2024-08-16 02:30:18,5.113s,PASSED
+"policyNumberOriginal = addPolicyPage.getValue(""policyNumber"")",Chrome 126.0.0.0,,,2024-08-16 02:30:18,2024-08-16 02:30:18,0.068s,PASSED
+"addPolicyPage.setPolicyEffectiveAndExpirationDates(""lastYearMinus"", ""lastWeek"")",Chrome 126.0.0.0,,,2024-08-16 02:30:18,2024-08-16 02:30:19,0.936s,PASSED
+addPolicyPage.clickSave(),Chrome 126.0.0.0,,,2024-08-16 02:30:19,2024-08-16 02:30:23,3.170s,PASSED
+applicantOverviewPage.renewPolicy(policyNumberOriginal),Chrome 126.0.0.0,,,2024-08-16 02:30:23,2024-08-16 02:30:24,1.183s,PASSED
+policyNumberUpdated = addPolicyPage.setRandomPolicyNumber(),Chrome 126.0.0.0,,,2024-08-16 02:30:24,2024-08-16 02:30:25,0.816s,PASSED
+"addPolicyPage.setPolicyEffectiveAndExpirationDates("""", ""nextYear"")",Chrome 126.0.0.0,,,2024-08-16 02:30:25,2024-08-16 02:30:25,0.882s,PASSED
+addPolicyPage.clickRenewPolicy(),Chrome 126.0.0.0,,,2024-08-16 02:30:25,2024-08-16 02:30:27,1.530s,PASSED
+applicantPolicyPage.selectPolicyCard(policyNumberUpdated),Chrome 126.0.0.0,,,2024-08-16 02:30:27,2024-08-16 02:30:28,0.886s,PASSED
+"policyHistoryPage.waitForSpecificElement(""historyTab"")",Chrome 126.0.0.0,,,2024-08-16 02:30:28,2024-08-16 02:30:28,0.185s,PASSED
+"policyHistoryPage.clickElement(""historyTab"")",Chrome 126.0.0.0,,,2024-08-16 02:30:28,2024-08-16 02:30:29,0.516s,PASSED
+isUpdated = policyHistoryPage.verifyActivePolicyNumber(policyNumberUpdated),Chrome 126.0.0.0,,,2024-08-16 02:30:29,2024-08-16 02:30:30,1.303s,PASSED
+resList.add(String.valueOf(isUpdated)),Chrome 126.0.0.0,,,2024-08-16 02:30:30,2024-08-16 02:30:30,0.000s,PASSED
+policyHistoryPage.deleteTransaction(policyNumberUpdated),Chrome 126.0.0.0,,,2024-08-16 02:30:30,2024-08-16 02:30:35,5.410s,PASSED
+isUpdated = policyHistoryPage.verifyActivePolicyNumber(policyNumberOriginal),Chrome 126.0.0.0,,,2024-08-16 02:30:35,2024-08-16 02:30:37,1.528s,PASSED
+resList.add(String.valueOf(isUpdated)),Chrome 126.0.0.0,,,2024-08-16 02:30:37,2024-08-16 02:30:37,0.000s,PASSED
+"!(resList.contains(""false""))",Chrome 126.0.0.0,,,2024-08-16 02:30:37,2024-08-16 02:30:37,0.001s,PASSED
+Start listener action : AfterTestCase,Chrome 126.0.0.0,,,2024-08-16 02:30:37,2024-08-16 02:30:37,0.027s,PASSED
